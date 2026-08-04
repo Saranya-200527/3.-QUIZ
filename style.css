@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#2563eb);
+}
+
+
+.container{
+    width:90%;
+    max-width:650px;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+h1{
+    margin-bottom:25px;
+    font-size:32px;
+    color:#fff;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#question{
+    font-size:22px;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+#options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.option{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#333;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.option:hover:not(:disabled){
+    background:#ffd54f;
+    transform:translateY(-3px);
+}
+
+.option:disabled{
+    cursor:not-allowed;
+    opacity:0.9;
+}
+
+button{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff6a00,#ff4081);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#result h2{
+    font-size:30px;
+    color:#ffe66d;
+    margin-bottom:15px;
+}
+
+#score{
+    font-size:24px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.hide{
+    display:none;
+}
+
+/* Responsive Design */
+@media (max-width:600px){
+
+    .container{
+        padding:25px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    #question{
+        font-size:18px;
+    }
+
+    .option{
+        font-size:15px;
+        padding:12px;
+    }
+
+    button{
+        width:100%;
+    }
+}
